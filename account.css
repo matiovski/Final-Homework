@@ -1,0 +1,311 @@
+body{
+    color: black;
+    margin: 0px;
+    padding: 0px;
+    background-color: whitesmoke;
+    min-height: 100vh;
+}
+
+.logo{
+    height: 25px;
+    padding-right: 0px;
+    padding-left: 0px;
+}   
+
+#navbar-right {
+    text-align: right;
+    display: flex;
+}
+
+.photo_account {
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+#app-container {
+    min-height: 100vh;
+}
+
+#account{
+    padding: 30px 40px 40px 40px;
+    background-color: whitesmoke;
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+.row{
+    padding: 0px;
+    text-align: left;
+    margin: 0px;
+    width: 100%;
+    display: flex;
+}
+
+.col-lg-2{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+.col-5{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+.col-sm-4{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+.col-md-3{
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 100%;
+}
+
+.main{
+    display: flex;    
+}
+
+.membershipbilling{
+    color: #303030;
+    padding: 0px;
+    border-top: 1px solid #dcdcdc;
+    border-bottom:1px solid #dcdcdc;
+}
+
+.membershipstuff{
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+.changes{
+    background-color: #f5f5f5;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+}
+
+.email{
+   display:flex;
+}
+
+#changeemail{
+    flex-grow: 1;
+    color:#007bf7;
+}
+
+.password{ 
+    display:flex
+}
+
+#changepassword{
+    flex-grow:1;
+    color:#007bf7;
+}
+
+.phone{
+    display:flex; 
+}
+
+#changephone{
+    flex-grow:1;
+    color:#007bf7;
+}
+
+.billing{
+    background-color: #f5f5f5;
+    display: flex;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 1px solid grey;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+}
+
+.payment{
+    display:flex
+}
+
+#paymentinfo{
+    flex-grow:1;
+    margin-top:16px;
+}
+
+.modifyphoto{
+    height: 70px;
+    width: 70px;
+}
+
+.giftcard{
+    background-color: #f5f5f5;
+    display: flex;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+}
+
+.title{
+    min-width: 100%;
+    min-height: 180px;
+    height: 180px;
+    margin-top:10px
+}
+
+.title1{
+    min-width: 100%;
+    margin-top:10px
+}
+
+.title2{
+    min-width: 100%;
+    margin-top:10px
+}
+
+.title3{
+    min-width: 100%;
+    margin-top:10px
+}
+
+h1{
+    text-align: left;
+    margin: 0px
+}
+
+h6{
+    padding-left: 10px;
+    margin: 29px 0px 20px 0px;
+    font-weight: bold;
+}
+
+
+.plandetails{
+    color: #303030;
+    padding: 0px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.planstuff{
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+.plan{
+    display:flex;
+}
+
+#changeplan{
+    flex-grow:1;
+    color:#007bf7;
+}
+
+.settings{
+    color: #303030;
+    border-top: 0px solid #dcdcdc;
+}
+
+.settingsstuff{
+    text-align: left;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+    padding-left: 50px;
+    margin-top: 10px;
+}
+
+.link{
+    display:flex;
+}
+
+.btn-link {
+    font-weight: 400;
+    color: #007bff;
+    text-decoration: none;
+    padding: 0px;
+    border: 0px;
+}
+
+.myprofile{
+    color: #303030;
+    border-top: 1px solid #dcdcdc;
+}
+
+.myprofilestuff{
+    color: #303030;
+    text-align: right;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 10px 0px 16px;
+    display: inline-block;
+    min-width: 200%;
+    width: 80%;
+    vertical-align: top;
+    padding-left: 50px;
+}
+
+.profile {
+    display:flex;
+}
+
+#manageprofile{
+    flex-grow: 1;
+    color: #007bf7;  
+}
+
+.myprof{
+    display:flex;
+    margin-bottom: 10px
+}
+
+#profile{
+    flex-grow: 1;
+    color:#007bf7;
+    margin: 28px 0px 20px;
+}
+
+.footer-link-item {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin-bottom: 16px;
+    display: inline-block;
+    min-width: 100px;
+    width: 80%;
+    padding-right: 12px;
+    vertical-align: top   
+}

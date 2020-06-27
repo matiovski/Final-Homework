@@ -1,0 +1,323 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <title>Netflix</title>
+  <link rel="shortcut icon" type="image/png" href="img/netlogo.png">
+  <link rel="stylesheet" href="account.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #303030;">
+    <a class="navbar-brand" href="#" class="navbar-left"><img src="img/netflix.png" class="img-responsive logo"></a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="mylist.html">My List</a>
+        </li>
+      </ul>
+
+      <div id="navbar-right">
+        <a href="home.html"><img class="photo_account" src="img/photo_account.png" alt="photo account" /></a>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+              aria-haspopup="true" aria-expanded="false">
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" style="text-align: center;">
+                <a class="dropdown-item"  type="button" href="account.html">My Account</a>
+              </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div id="app-container">
+    <div id="account" class="container">
+      <div class="row">
+        <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+          <div>
+            <h1>Account </h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="membershipbilling">
+        <div class="row">
+          <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+            <div class="main">
+              <div class="title">
+                <p>MEMBERSHIP & BILLING</p>
+                <!-- Button trigger modal -->
+                <button type="button" class="btn btn-outline-secondary" data-toggle="modal" data-target="#membership">
+                  Cancel Membership
+                </button>
+              </div>
+            
+              <div class="membershipstuff">
+                <div class="changes">
+                  <div class="email">
+                   <p style="font-weight: bold;">mattia@strive.school</p>
+                    <p id="changeemail">
+                      <a href="">Change account email</a>
+                    </p>
+                  </div>
+                  <div class="password">
+                    <p>Password: *************</p>
+                    <p id=changepassword>
+                      <a href="">Change password</a>
+                    </p>
+                  </div>
+                  <div class="phone">
+                    <p>Phone: 323844181</p>
+                    <p id="changephone">
+                      <a href="">Change phone number</a>
+                    </p>
+                  </div> <hr>
+                </div>
+                
+                <div class="billing">
+                  <div class="payment">
+                    <img class="modifyphoto" src="img/pplogo.png" alt="pplogo"/>
+                    <p id="paymentinfo">
+                      <a href="">Update payment info</a>
+                    </p>
+                  </div>
+                  <div class="billingdetails">
+                    <p>
+                      <a href="">Billing details</a>
+                    </p>
+                  </div>
+                  <hr>
+                </div>
+                
+                <div class="giftcard">
+                  <div><a href="https://www.netflix.com/it-en/redeem">Redeem gift card</a></div>
+                  <div><a href="https://www.netflix.com/gift-cards">Where to buy gift cards</a></div>
+                </div>
+            
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="plandetails">
+        <div class="row">
+          <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+            <div class="main">
+              <div class="title1">
+                <p>PLAN DETAILS</p>
+              </div>
+              
+              <div class="planstuff">
+                <div class="changes">
+                  <div class="plan">
+                    <p style="font-weight: bold;">Premium</p>
+                    <p id="changeplan">
+                      <a href="">Change plan</a>
+                    </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+      
+    
+    <div class="settings">
+        <div class="row">
+          <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+            <div class="main">
+              <div class="title2">
+                <p>SETTINGS</p>
+              </div>
+              
+            <div class="settingsstuff">
+              <div class="link">
+                <a href="https://help.netflix.com/en/node/264">Parental controls</a>
+              </div>
+             
+              <div class="link">
+                <a href="">Test participation<a>
+              </div>
+             
+              <div class="link">
+                <a href="https://help.netflix.com/en/node/101262">Manage download devices</a>
+              </div>
+
+              <div class="link">
+                <a href="https://help.netflix.com/en/node/283">Activate a device</a>
+              </div>
+
+              <div class="link">
+                <button type="button" class="btn btn-link" data-toggle="modal" data-target="#streamingactivity">Recent device streaming activity</button>
+              </div>
+
+              <div class="link">
+                <a href="">Sign out of all devices</a>
+              </div>
+
+              <div class="link">
+                <a href="https://fast.com/it/">Speed test</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="myprofile">
+      <div class="row">
+          <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+          <div class="main">
+              <div class="title3">
+                <p>MY PROFILE</p>
+              </div>
+
+              <div class="myprofilestuff">
+                <div class="changes">
+                  <div class="myprof">
+                      <img class="modifyphoto" src="img/photo_account.png" alt="photo account"><h6 style="font-weight: bold;">Mattia Campagnolo</h6>
+                      <p id="profile">Manage profile</p>
+                      <p id="profile">Add profile email</p>
+                  </div>
+
+                  <div class="password">
+                    <div class="row">
+                      <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                        <div class="footer-link-item"><a href="https://media.netflix.com/en/language-selection" target="_blank"><span>Language</span></a></div>
+                      </div>
+                   
+                      <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                        <div class="footer-link-item">
+                          <button type="button" class="btn btn-link" data-toggle="modal" data-target="#viewingactivity">Viewing activity</button>
+                        </div>
+                      </div>
+
+                      <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                        <div class="footer-link-item">
+                          <a href=""><span>Playback settings</span></a>
+                        </div>
+                      </div>
+                                       
+                      <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                        <div class="footer-link-item">
+                          <a href="https://help.netflix.com/en/node/2064/us" target="_blank"><span>Ratings</span></a>
+                        </div>
+                      </div>
+                    
+                      <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                        <div class="footer-link-item">
+                          <a href="https://help.netflix.com/en/node/100267" target="_blank"><span>Subtitle appereance</span></a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+      </div>
+      </div>
+  </div>
+  </div>
+
+    
+
+    <!-- Modal membership-->
+    <div class="modal fade" id="membership" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Cancel Membership</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            Your membership has been cancelled.
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal membership-->
+    <div class="modal fade" id="streamingactivity" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Streaming activity</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            x→+∞ lim f(x)
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <!-- Modal activity -->
+  <div class="modal fade" id="viewingactivity" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Viewing activity</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+        Are you really checking your activity? You know the answer: TOO MUCH, BRO!  
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>

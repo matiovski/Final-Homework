@@ -1,0 +1,56 @@
+body{
+    background-color: #303030;
+}
+
+.logo{
+    height: 25px;
+    padding-right: 0px;
+    padding-left: 0px;
+}   
+
+#navbar-right{
+    text-align: right;
+    display: flex;
+}
+
+.photo_account{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+}
+
+#app-container{
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    height:1000px;
+}
+
+p{
+    color: white;
+}
+
+h3{
+    color: whitesmoke;
+    text-align: center;
+}
+
+h2{
+    color:whitesmoke;
+    position: fixed;
+}
+
+.watchlist{
+    color: whitesmoke;
+    align-items: center;
+    justify-content: center; 
+}
+
+.container{
+    align-items: center;
+}
+
+.buttons{
+    top: 70px;
+}
+

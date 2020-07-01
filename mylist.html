@@ -17,6 +17,7 @@
 
 <body>
   <div class="app-container">
+    <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #303030;">
       <a class="navbar-brand" href="#" class="navbar-left"><img src="img/netflix.png"
           class="img-responsive logo"></a>
@@ -24,7 +25,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="home.html">Home <span class="sr-only"></span></a>
           </li>
 
           <li class="nav-item">
@@ -37,10 +38,10 @@
           <ul class="navbar-nav mr-auto">
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="account.html" id="navbarDropdown" role="button" data-toggle="dropdown"
-                aria-haspopup="true" aria-expanded="false">
+              aria-haspopup="true" aria-expanded="false">
               </a>
               <div class="dropdown-menu dropdown-menu-right" style="text-align: center;">
-                <a class="dropdown-item" type="button" href="account.html">My Account</a>
+              <a class="dropdown-item" type="button" href="account.html">My Account</a>
               </div>
             </li>
           </ul>
@@ -48,8 +49,7 @@
       </div>
     </nav>
     
-    
-    
+    <!--Carousel-->
     <div class="h3">
           <h3>FAVOURITE TV SERIES</h3>
     </div>
@@ -146,22 +146,20 @@
       </a>
     </div>
     
+    <!--Watch List-->
     <div class="container">
       <div class="watchlist">
         <h1>Watchlist</h1>
         <div class="buttons">
-          
-          <input type="checkbox" id="completed" onchange="watched()">
+        
           <input id="add" type="text" placeholder="Add your tv series here!" style="border-radius: 5px; padding: 5px;">
-          <button type="button" value="add" id="addtask" class="btn btn-danger" onclick="add()">Add</button>
-          <input type="button" id="clear" class="btn btn-warning" onclick="eliminate()" value="Cancel" style="color: whitesmoke;">
+          <button type="button" value="add" id="addtask" class="btn btn-success" onclick="add()">Add</button>
+          <input type="button" id="clear" class="btn btn-danger" onclick="eliminate()" value="Cancel" style="color: whitesmoke;">
     
           <ul id="mylist"></ul>
         </div>
       </div>
     </div>
-  
-  
   
   </div>
 

@@ -3,7 +3,8 @@ let movies = ["Pokemon", "Harry Potter", "Dragon Ball"]
 
 async function loadMovies() {
     for (i = 0; i < movies.length; i++) {
-        let response = await fetch("http://www.omdbapi.com/?apikey=25475365&s=" + movies[i])
+        let response = await fetch("http://www.omdbapi.com/?apikey=25475365&s=" + movies[i],
+        {method: "GET"})
         let films = await response.json()
         console.log(films)
         let MoviesContainer = document.createElement("div")
@@ -72,7 +73,6 @@ function search() {
         if (response.ok) {
             let movies = await response.json();
             if (movies.Search) {
-                
                 let list = document.createElement("div")
                 list.className = "row"
                 list.style.justifyContent = "center"
@@ -97,7 +97,8 @@ function search() {
 
 //Details
 async function loadClicked(MovieId) {
-    let response = await fetch("http://www.omdbapi.com/?apikey=25475365&i=" + MovieId)
+    let response = await fetch("http://www.omdbapi.com/?apikey=25475365&i=" + MovieId,
+    {method:"GET"})
     let TheInfo = await response.json()
     console.log(TheInfo)
     document.querySelector("#image").src = TheInfo.Poster

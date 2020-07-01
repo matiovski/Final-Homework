@@ -1,33 +1,30 @@
 //Home
-let Movies = ["Harry Potter", "Lord of the Rings", "Matrix"]
+let movies = ["Pokemon", "Harry Potter", "Dragon Ball"]
 
 async function loadMovies() {
-    for (i = 0; i < MainMovies.length; i++) {
-        let response = await fetch("http://www.omdbapi.com/?apikey=25475365&s=" + Movies[i],
-            "method"= "GET")
-        let Films = await response.json()
-        console.log(Films)
+    for (i = 0; i < movies.length; i++) {
+        let response = await fetch("http://www.omdbapi.com/?apikey=25475365&s=" + movies[i])
+        let films = await response.json()
+        console.log(films)
         let MoviesContainer = document.createElement("div")
         MoviesContainer.className = "movies-container"
-        MoviesContainer.innerHTML = `<h3> The best movies of "${Movies[i]}"</h3>`
-        let myfilms = document.createElement("div")
-        myfilms.className = "movies-firstpage"
+        MoviesContainer.innerHTML = `<h3>"${movies[i]}"</h3>`
+        let MyMovies = document.createElement("div")
+        MyMovies.className = "movies-firstpage"
+        for (j = 0; j < films.Search.length; j++) {
+            MyMovies.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-2 card-poster">  
+            <img class="poster" src="${films.Search[j].Poster}">
+            <a href="details.html?imdbID=${films.Search[j].imdbID}"><div class="overlay">
+            <div class="info">
+            <p class="title">${films.Search[j].Title} </p>
+            <span class="badge badge-info" class="type">${films.Search[j].Type}</span>
+            </div>
+            </div></a>
+            </div>`
+        }
+        ChosenMovies.appendChild(MoviesContainer)
+        MoviesContainer.appendChild(MyMovies)
     }
-    for (y = 0; y < Films.Search.length; y++) {
-
-        myfilms.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-2 card-poster">  
-        <img class="poster" src="${Films.Search[y].Poster}">
-        <a href="details.html?imdbID=${FIlms.Search[y].imdbID}"><div class="overlay">
-        <div class="info">
-        <p class="title">${Films.Search[y].Title} </p>
-        <span class="badge badge-success" class="type">${Films.Search[y].Type}</span>
-        </div>
-        </div></a>
-        </div>`
-    }
-    ChosenMovies.appendChild(MoviesContainer)
-    MoviesContainer.appendChild(myfilms)
-
 }
 
 //My List
@@ -39,9 +36,6 @@ function add() {
         TheMovie.classList.add("list")
         TheMovie.innerText = ToWatch
         list.appendChild(TheMovie)
-
-        TheMovie.addEventListener("click", (e) => e.currentTarget.classList.toggle("seen"))
-
     } else {
         alert("You must insert a tv series!")
     }
@@ -52,17 +46,71 @@ function eliminate() {
     list.innerHTML = ""
 }
 
-function watched() {
-    let checkbox = document.querySelector("#completd").checked
-    if (checkbox) {
-        let seen = document.querySelectorAll(".seen")
-        for (let i = 0; i < seen.length; i++) {
-            seen[i].classList.add("hidden")
-        }
+//Search
+function search() {
+    setTimeout(function () { $("[data-toggle=popover]").popover("hide") });
+    let ChosenMovies = document.querySelector("#ChosenMovies")
+    ChosenMovies.innerHTML = "";
+    let searched = document.querySelector("#movie-search").value
+    if (searched) {
+        setTimeout(function () { $("[data-toggle=popover]").popover("hide") });
+        loadSearch()
     }
     else {
-        let hidden = document.querySelectorAll(".hidden")
-        for (let i = 0; i < hidden.length; i++)
-            hidden[i].classList.remove("hidden")
+        setTimeout(function () { $("[data-toggle=popover]").popover("show") });
     }
+
+    async function loadSearch() {
+        let clicked = document.querySelector(".card-clicked")
+        clicked.innerHTML = "";
+        let films = document.querySelector("#films")
+        films.innerHTML = ""
+        let url = "http://www.omdbapi.com/?apikey=25475365&s="
+        let searched = document.querySelector("#movie-search").value
+        let response = await fetch(url += searched)
+
+        if (response.ok) {
+            let movies = await response.json();
+            if (movies.Search) {
+                
+                let list = document.createElement("div")
+                list.className = "row"
+                list.style.justifyContent = "center"
+                let  = document.querySelector("#films")
+                for (i = 0; i < movies.Search.length; i++) {
+                    list.innerHTML += `
+                    <div class="col-sm-6 col-md-4 col-lg-2 card-poster">  
+                    <img class="poster" src="${movies.Search[i].Poster}">
+                    <a href="details.html?imdbID=${movies.Search[i].imdbID}"><div class="overlay">
+                    <div class="info">
+                    <p class="title">${movies.Search[i].Title} </p>
+                    <span class="badge badge-info" class="type">${movies.Search[i].Type}</span>
+                    </div>
+                    </div></a>
+                    </div>`
+                    films.appendChild(list)
+                }
+            }
+        }
+    }
+}
+
+//Details
+async function loadClicked(MovieId) {
+    let response = await fetch("http://www.omdbapi.com/?apikey=25475365&i=" + MovieId)
+    let TheInfo = await response.json()
+    console.log(TheInfo)
+    document.querySelector("#image").src = TheInfo.Poster
+    let about = document.querySelector(".about")
+    // about.style.backgroundImage = `url("${TheInfo.Poster}")`
+    about.innerHTML =
+    `<h2> ${TheInfo.Title}</h2>
+    <p> <h5> Genre/Genres </h5> ${TheInfo.Genre}</p>
+    <p> <h5> Year </h5> ${TheInfo.Year} </p>
+    <p><h5> Runtime </h5>${TheInfo.Runtime}</p>
+    <p> <h5> Language/Languages </h5>${TheInfo.Language}</p>
+    <p> <h5> Country/Countries </h5> ${TheInfo.Country} </p>
+    <p> <h5> Plot </h5> ${TheInfo.Plot}</p>
+    <p> <h5> Actors </h5> ${TheInfo.Actors} </p>
+    <p> <h5> Director/Directors </h5>${TheInfo.Director}</p>`
 }

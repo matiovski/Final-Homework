@@ -12,13 +12,13 @@ async function loadMovies() {
         MoviesContainer.innerHTML = `<h3>"${movies[i]}"</h3>`
         let MyMovies = document.createElement("div")
         MyMovies.className = "movies-firstpage"
-        for (j = 0; j < films.Search.length; j++) {
+        for (w = 0; w < films.Search.length; w++) {
             MyMovies.innerHTML += `<div class="col-sm-6 col-md-4 col-lg-2 card-poster">  
-            <img class="poster" src="${films.Search[j].Poster}">
-            <a href="details.html?imdbID=${films.Search[j].imdbID}"><div class="overlay">
+            <img class="poster" src="${films.Search[w].Poster}">
+            <a href="details.html?imdbID=${films.Search[w].imdbID}"><div class="overlay">
             <div class="info">
-            <p class="title">${films.Search[j].Title} </p>
-            <span class="badge badge-info" class="type">${films.Search[j].Type}</span>
+            <p class="title">${films.Search[w].Title} </p>
+            <span class="badge badge-info" class="type">${films.Search[w].Type}</span>
             </div>
             </div></a>
             </div>`
@@ -103,7 +103,6 @@ async function loadClicked(MovieId) {
     console.log(TheInfo)
     document.querySelector("#image").src = TheInfo.Poster
     let about = document.querySelector(".about")
-    // about.style.backgroundImage = `url("${TheInfo.Poster}")`
     about.innerHTML =
     `<h2> ${TheInfo.Title}</h2>
     <p> <h5> Genre/Genres </h5> ${TheInfo.Genre}</p>

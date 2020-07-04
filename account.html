@@ -18,36 +18,40 @@
 <body>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #303030;">
-    <a class="navbar-brand" href="#" class="navbar-left"><img src="img/netflix.png" class="img-responsive logo"></a>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <a class="navbar-brand" href="#" class="navbar-left"><img src="img/netflix.png"
+        class="img-responsive logo"></a>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+        <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="mylist.html">My List</a>
-        </li>
-      </ul>
 
-      <div id="navbar-right">
+        <li class="nav-item">
+            <a class="nav-link" href="mylist.html">My List</a>
+        </li>
+        </ul>
+
+        <form class="form-inline my-2 my-lg-0" id="search">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+            id="movie-search">
+          <button onclick=search() type="button" class="btn btn-md btn-secondary" data-placement="bottom"
+            data-toggle="popover" data-content="You must insert something!">Search</button>
+        </form>
+
+        <div id="navbar-right">
         <img class="photo_account" src="img/photo_account.png" alt="photo account" />
         <ul class="navbar-nav mr-auto">
-          <li class="nav-item dropdown">
+            <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-              aria-haspopup="true" aria-expanded="false">
-              </a>
-              <div class="dropdown-menu dropdown-menu-right" style="text-align: center;">
-                <a class="dropdown-item"  type="button" href="account.html">My Account</a>
-              </div>
-          </li>
+                aria-haspopup="true" aria-expanded="false">
+            </a>
+            <div class="dropdown-menu dropdown-menu-right" style="text-align: center;">
+                <a class="dropdown-item" type="button" href="account.html">My Account</a>
+            </div>
+            </li>
         </ul>
-      </div>
+        </div>
     </div>
   </nav>
 
@@ -241,7 +245,7 @@
       </div>
       </div>
   </div>
-  </div>
+  
 
     
 
@@ -307,9 +311,18 @@
       </div>
     </div>
   </div>
+  </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script>
+      window.onload = async () => {
+        const urlParams = new URLSearchParams(window.location.search)
+        const MovieId = urlParams.get('imdbID')
+        await loadClicked(MovieId)
+      }
+    </script>
+    <script src="index.js"> </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
       crossorigin="anonymous"></script>

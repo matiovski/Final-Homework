@@ -48,6 +48,7 @@ h2{
 
 .container{
     align-items: center;
+    position: relative;
 }
 
 .buttons{

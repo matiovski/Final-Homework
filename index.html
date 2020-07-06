@@ -15,149 +15,148 @@
     <link rel="stylesheet" href="home.css">
   </head>
 
-<body>
-  <div class="app-continer">
-    <div id="menu">
-      <!--Navbar-->
-      <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #303030;">
-        <a class="navbar-brand" href="#" class="navbar-left"><img src="img/netflix.png"
-            class="img-responsive logo"></a>
+  <body>
+    <div class="app-continer">
+      <div id="menu">
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #303030;">
+          <img src="img/netflix.png" class="img-responsive logo">
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+              </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="mylist.html">My List</a>
-            </li>
-            </ul>
+              <li class="nav-item">
+                  <a class="nav-link" href="mylist.html">My List</a>
+              </li>
+              </ul>
 
-            <form class="form-inline my-2 my-lg-0" id="search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
-                id="movie-search">
-            <button onclick=search() type="button" class="btn btn-md btn-secondary" data-placement="bottom"
-                data-toggle="popover" data-content="You must insert something!">Search</button>
-            </form>
+              <form class="form-inline my-2 my-lg-0" id="search">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"
+                  id="movie-search">
+              <button onclick=search() type="button" class="btn btn-md btn-secondary" data-placement="bottom"
+                  data-toggle="popover" data-content="You must insert something!">Search</button>
+              </form>
 
-            <div id="navbar-right">
-            <img class="photo_account" src="img/photo_account.png" alt="photo account" />
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
-                </a>
-                <div class="dropdown-menu dropdown-menu-right" style="text-align: center;">
-                    <a class="dropdown-item" type="button" href="account.html">My Account</a>
-                </div>
-                </li>
-            </ul>
-            </div>
+              <div id="navbar-right">
+              <img class="photo_account" src="img/photo_account.png" alt="photo account" />
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                      aria-haspopup="true" aria-expanded="false">
+                  </a>
+                  <div class="dropdown-menu dropdown-menu-right" style="text-align: center;">
+                      <a class="dropdown-item" type="button" href="account.html">My Account</a>
+                  </div>
+                  </li>
+              </ul>
+              </div>
+          </div>
+        </nav>
+
+        <!--Movies-->
+        <div class="container">
+          <div id="films"></div>
+          <div id="ChosenMovies" class="container" style="justify-content: center;"></div>
+          <div class="container card-clicked"></div>
         </div>
-      </nav>
+      </div>
+    
+    
+      <!--Footer-->
+        <div id="footer">
+          <div class="border-footer">
+            <!--Apps-->
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <a href="https://www.instagram.com/netflix/" target="_blank">
+                  <img id="Instagram" src="img/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://twitter.com/netflix" target="_blank">
+                  <img id="Twitter" src="img/twlogo.png" alt="Twitter" />
+                </a>
+                <a href="https://www.youtube.com/user/NewOnNetflix" target="_blank">
+                  <img id="YouTube" src="img/ytlogo.png" alt="YouTube" />
+                </a>
+                <a href="https://www.tiktok.com/@netflix?lang=en" target="_blank">
+                  <img id="Tiktok" src="img/tiktoklogo.png" alt="Tiktok" />
+                </a>
+              </div>
+            </div>
 
-      <!--Movies-->
-      <div class="container">
-        <div id="films"></div>
-      
-
-      <div id="ChosenMovies" class="container" style="justify-content: center;"></div>
-      <div class="container card-clicked"></div></div>
+            <!--Links-->
+            <div class="row">
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en/node/412/us" style="color:#808080"
+                    target="_blank"><span>FAQ</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en" style="color:#808080" target="_blank">
+                    <span>Help Center</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://media.netflix.com/en/" style="color:#808080"
+                    target="_blank"><span>Media Center</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://www.netflixinvestor.com/ir-overview/profile/default.aspx"
+                    style="color:#808080" target="_blank"><span>Investor Relations</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://jobs.netflix.com/" style="color:#808080"
+                    target="_blank"><span>Jobs</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en/legal/termsofuse" style="color:#808080"
+                    target="_blank"><span>Terms of
+                      Use</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en/legal/privacy" style="color:#808080"
+                    target="_blank"><span>Privacy</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en/node/2101/us" style="color:#808080"
+                    target="_blank"><span>Information</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en/contactus" style="color:#808080"
+                    target="_blank"><span>Contact
+                      Us</span></a></div>
+              </div>
+              <div class="col-5 col-sm-4 col-md-3 col-lg-2">
+                <div class="footer-link-item"><a href="https://help.netflix.com/en/legal/notices" style="color:#808080"
+                    target="_blank"><span>Legal
+                      Notices</span></a></div>
+              </div>
+            </div>
+          </div>
       </div>
     </div>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   
-  
-    <!--Footer-->
-      <div id="footer">
-        <div class="border-footer">
-          <div class="row">
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <a href="https://www.instagram.com/netflix/" target="_blank">
-                <img id="Instagram" src="img/instagram.png" alt="Instagram" />
-              </a>
-              <a href="https://twitter.com/netflix" target="_blank">
-                <img id="Twitter" src="img/twlogo.png" alt="Twitter" />
-              </a>
-              <a href="https://www.youtube.com/user/NewOnNetflix" target="_blank">
-                <img id="YouTube" src="img/ytlogo.png" alt="YouTube" />
-              </a>
-              <a href="https://www.tiktok.com/@netflix?lang=en" target="_blank">
-                <img id="Tiktok" src="img/tiktoklogo.png" alt="Tiktok" />
-              </a>
-            </div>
-          </div>
-    
-          <div class="row">
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en/node/412/us" style="color:#808080"
-                  target="_blank"><span>FAQ</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en" style="color:#808080" target="_blank">
-                  <span>Help Center</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://media.netflix.com/en/" style="color:#808080"
-                  target="_blank"><span>Media Center</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://www.netflixinvestor.com/ir-overview/profile/default.aspx"
-                  style="color:#808080" target="_blank"><span>Investor Relations</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://jobs.netflix.com/" style="color:#808080"
-                  target="_blank"><span>Jobs</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en/legal/termsofuse" style="color:#808080"
-                  target="_blank"><span>Terms of
-                    Use</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en/legal/privacy" style="color:#808080"
-                  target="_blank"><span>Privacy</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en/node/2101/us" style="color:#808080"
-                  target="_blank"><span>Information</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en/contactus" style="color:#808080"
-                  target="_blank"><span>Contact
-                    Us</span></a></div>
-            </div>
-            <div class="col-5 col-sm-4 col-md-3 col-lg-2">
-              <div class="footer-link-item"><a href="https://help.netflix.com/en/legal/notices" style="color:#808080"
-                  target="_blank"><span>Legal
-                    Notices</span></a></div>
-            </div>
-          </div>
-        </div>
-    </div>
-  </div>
-
-
-
-
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
- 
-  <script>
-    window.onload = async () => {
-    await loadMovies()
-  }
-  </script>
-  <script src="index.js"> </script>
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
-    crossorigin="anonymous"></script>
-</body>
+    <script>
+      window.onload = async () => {
+      await loadMovies()
+    }
+    </script>
+    <script src="index.js"> </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"></script>
+  </body>
 
 </html> 

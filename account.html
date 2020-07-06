@@ -18,8 +18,7 @@
 <body>
   <!--Navbar-->
   <nav class="navbar navbar-expand-lg navbar navbar-dark" style="background-color: #303030;">
-    <a class="navbar-brand" href="#" class="navbar-left"><img src="img/netflix.png"
-        class="img-responsive logo"></a>
+    <img src="img/netflix.png" class="img-responsive logo">
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
@@ -55,6 +54,7 @@
     </div>
   </nav>
 
+  <!--Account Stuff-->
   <div id="app-container">
     <div id="account" class="container">
       <div class="row">
@@ -241,10 +241,10 @@
                   </div>
                 </div>
               </div>
-          </div>
+            </div>
+        </div>
       </div>
-      </div>
-  </div>
+    </div>
   
 
     
@@ -291,8 +291,8 @@
       </div>
     </div>
 
-      <!-- Modal activity -->
-  <div class="modal fade" id="viewingactivity" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!-- Modal activity -->
+    <div class="modal fade" id="viewingactivity" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
@@ -310,17 +310,15 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
   </div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script>
       window.onload = async () => {
-        const urlParams = new URLSearchParams(window.location.search)
-        const MovieId = urlParams.get('imdbID')
-        await loadClicked(MovieId)
-      }
+      await loadMovies()
+    }
     </script>
     <script src="index.js"> </script>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
